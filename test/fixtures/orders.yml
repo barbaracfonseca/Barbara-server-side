@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+   order: 1
+  name_o: MyString
+  date: 2020-05-14
+  address: MyString
+  total_cost: 9.99
+
+two:
+   order: 1
+  name_o: MyString
+  date: 2020-05-14
+  address: MyString
+  total_cost: 9.99

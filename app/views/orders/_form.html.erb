@@ -1,0 +1,46 @@
+<%= form_with(model: order, local: true) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="insideContainer">
+  <div class="field" id="innerField">
+    <%= form.label :order, class: 'h6', id:'labelForm' %>
+    <%= form.number_field :order, id:'inputForm' %>
+  </div>
+
+  <div class="field" id="innerField">
+    <%= form.label :name_o,  class: 'h6 ', id: 'labelForm' %>
+    <%= form.text_field :name_o, id:'inputForm' %>
+  </div>
+
+  <div class="field" id="innerField">
+    <%= form.label :date, class: 'h6 ', id: 'labelForm'  %>
+    <%= form.date_select :date, id:'inputForm' %>
+  </div>
+
+  <div class="field" id="innerField">
+    <%= form.label :address, class: 'h6 ', id: 'labelForm'%>
+    <%= form.text_field :address, id:'inputForm' %>
+  </div>
+
+  <div class="field" id="innerField">
+    <%= form.label :total_cost, class: 'h6 ', id: 'labelForm' %>
+    <%= form.text_field :total_cost, id:'inputForm' %>
+  </div>
+
+  <div class="actions text-center">
+  <button type="button" class="btn btn-primary">  
+    <%= form.submit class:'btn btn-primary' %>
+    </button>
+  </div>
+<% end %>
+</div>

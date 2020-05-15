@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /*body { padding-top: 100px; }
+ footer { margin-top: 100px; }
+ table, td, th { vertical-align: middle !important; border: none !important; }
+ th { border-bottom: 1px solid #DDD !important; }*/
+
+ @import 'bootstrap';
+
+ body, html {
+    height: 100%;
+    margin:0px;
+ }
+
+ .background{
+    background-color: lightgray;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+ }
+
+ .jumbotron{
+     background-color: lightgreen;
+     opacity: .8!important;
+ }
+
+ #eachButton{
+     border-width: 1px !important;
+ }
+
+ #itemDiv{
+    background-color: lightcyan;
+	opacity:.96!important;
+ }
+
+ #insideContainer {
+	width: 70%;
+	margin-left: 15%;
+}
+
+#innerField {
+    margin-bottom: 2%;
+    }
+
+#inputForm {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 0%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+#labelForm {
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+#notice {
+	background-color:lightgrey;
+	opacity:.96!important;
+	padding-top: 2px;
+}
+
+#orderDiv{
+    background-color:lightcyan;
+	opacity:.96!important;
+}
+
+.onHover{
+	background-color: transparent !important;
+	text-decoration: none !important; 
+  }  
+  
+  .onHoverItem{
+	background-color: transparent !important;
+	text-decoration: underline;
+  }   

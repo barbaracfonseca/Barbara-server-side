@@ -1,0 +1,62 @@
+<%= form_with(model: item, local: true) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+        <% item.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="insideContainer">
+   <div class="field" id="innerField">
+    <%= form.label :items, class: 'h6', id:labelForm %>
+    <%= form.text_field :items , id:'inputForm' %>
+  </div>
+
+  <div class="field" id="innerField">
+    <%= form.label :type_item, class: 'h6 ', id: 'labelForm' %>
+    <%= form.text_field :type_item, id:'inputForm' %>
+  </div>
+
+  <div class="field" id="innerField">
+    <%= form.label :description, class: 'h6 ', id: 'labelForm' %>
+    <%= form.text_area :description, id:'inputForm' %>
+  </div>
+
+  <div class="field" id="innerField">
+    <%= form.label :aditional, class: 'h6', id: 'labelForm' %>
+    <%= form.text_field :aditional, id:'inputForm' %>
+  </div>
+
+  <div class="field" id="innerField">
+    <%= form.label :price, class:'h6', id: 'labelForm' %>
+    <%= form.text_field :price, id: 'inputForm' %>
+  </div>
+
+ <div class="field">
+      <%= form.label :items, class: 'h6 ' %>
+      <div class="container">
+        <% @items.each do |item| %>
+          <div class="row">
+
+    <%= form.check_box 'orders',  { :multiple => true, :checked => @order.items.map { |i| i.id }.include?(item.id) }, item.id %>
+
+  
+  </div>
+<% end %>
+
+ </div>
+    </div>
+
+    <div class="actions text-center">
+      <button type="button" class="btn btn-primary">
+        <%= form.submit class:'btn btn-primary' %>
+      </button>
+    </div>
+
+  </div>
+<% end %>

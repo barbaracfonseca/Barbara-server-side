@@ -1,0 +1,48 @@
+<p></p>
+
+<div id="itemDiv" class="container w-100 p-0 rounded">
+
+  <div  id="insideContainer">
+    <br>
+    <h1 class="text-center"><small>Items Page</small></h1>
+    <p>
+      <h4 class='font-weight-bold' style="display: inline">Items: </h4>
+      <%= @item.items %>
+    </p>
+
+
+<p>
+  <h4 class='font-weight-bold' style="display: inline">Type item:</h4>
+  <%= @item.type_item %>
+</p>
+
+<p>
+  <h4 class='font-weight-bold' style="display: inline">Description:</h4>
+  <%= @item.description %>
+</p>
+
+<p>
+  <h4 class='font-weight-bold' style="display: inline">Aditional:</h4>
+  <%= @item.aditional %>
+</p>
+
+<p>
+  <h4 class='font-weight-bold' style="display: inline">Price:</h4>
+  <%= @item.price %>
+</p>
+
+<% end %>
+        <% else %>
+          <span>None</span>
+        <% end %>
+      </div>
+    </div>
+<br>
+<h4 id="notice" class="text-center font-weight-lig"><%= notice %></h4>
+<br>
+
+<%= link_to 'Edit', edit_item_path(@item), class:'btn btn-secondary text-black' %> |
+<%= link_to 'Back', items_path, class:'btn btn-secondary text-black' %>
+<br>
+</div>
+</div>

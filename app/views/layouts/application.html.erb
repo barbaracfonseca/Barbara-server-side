@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Health Sales</title>
+    <link rel="stylesheet" href="https://healthsales.com/assets/bootstrap.css">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+     <div class="background"> 
+		<div class="jumbotron jumbotron-fluid p-3 text-center text-black">
+    <div class="container">
+   <h1><%= link_to 'Items', root_path, style:'color:black', class:'onHover' %></h1>
+  
+  </div>
+  </div>
+
+  <div class="container">
+  
+
+   <div class="btn-group w-100">
+		<button type="button" class="btn btn-sm btn-light btn-block rounded border border-dark" id="eachButton"><%= link_to 'Item', root_path, class:'onHover text-darkgrey' %></button>
+		<button type="button" class="btn btn-sm btn-light btn-block m-0 rounded border border-dark" id="eachButton"><%= link_to 'Order', '/orders', class:'onHover text-darkgrey' %></button>
+	</div>
+
+  <br>
+	
+			<%= yield %>
+		
+
+			
+			
+			
+			
+	</div>		
+		</div>
+  </body>
+</html>

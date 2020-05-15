@@ -1,0 +1,45 @@
+<br>
+
+<div id="orderDiv" class="container w-100 p-0 rounded">
+
+<div class="table-responsive">
+
+<table class="table table-hover w-100 m-0 " >
+  <thead class="table table-borderless">
+    <tr>
+      <th> order</th>
+      <th>Name o</th>
+      <th>Date</th>
+      <th>Address</th>
+      <th>Total Cost</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order. order %></td>
+        <td><%= order.name_o %></td>
+        <td><%= order.date %></td>
+        <td><%= order.address %></td>
+        <td><%= order.total_cost %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+
+<br>
+<h4 id="notice"><%= notice %></h4>
+<br>
+
+</div>
+<br>
+
+<button type="button" class="btn btn-primary btn-block"><%= link_to 'New Order', new_order_path,  class: 'text-black'%></button> 
